@@ -74,7 +74,7 @@ const addToCart=async(itemId)=>{
   setcartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
   let token=localStorage.getItem("authToken")
   if(token){
-    let response=await axios.post(url/api/v1/users/cart",{itemId:itemId},{
+    let response=await axios.post("url/api/v1/users/cart",{itemId:itemId},{
        headers:{
         "authorization":`${token}`,
         "content-type":"application/json",
